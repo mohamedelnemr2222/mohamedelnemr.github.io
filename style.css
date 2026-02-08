@@ -1,51 +1,57 @@
 /* Reset */
-* { margin:0; padding:0; box-sizing:border-box; font-family: Arial,sans-serif; transition:0.3s; }
-body { background:#0a2540; color:#fff; line-height:1.6; }
-a { text-decoration:none; }
-ul { list-style:none; }
-button { cursor:pointer; }
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Arial',sans-serif; transition: all 0.3s ease;}
+body {background:#121212; color:#eee; line-height:1.7; scroll-behavior:smooth;}
 
-/* Topbar Menu */
-.topbar { position:fixed; top:0; width:100%; background:#123d6d; z-index:999; display:flex; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
-.topbar-links { display:flex; flex-wrap:wrap; }
-.topbar-links li { margin:5px; }
-.topbar-links li a, .topbar-links li button { padding:8px 12px; border-radius:6px; background:rgba(255,255,255,0.1); color:#fff; border:none; }
-.topbar-links li a.active, .topbar-links li a:hover, .topbar-links li button:hover { background:rgba(255,255,255,0.25); }
+/* Topbar */
+.topbar {display:flex; justify-content:space-between; align-items:center; padding:15px 30px; background:#1a1a1a; flex-wrap:wrap; border-radius:8px; margin-bottom:20px;}
+.topbar-left {display:flex; align-items:center; gap:15px;}
+.topbar-left h2 {font-size:1.3rem;}
+.topbar-pic {width:120px; height:120px; object-fit:cover; border-radius:12px; border:2px solid #6ab7ff;}
+.topbar-right {display:flex; align-items:center; gap:20px; flex-wrap:wrap;}
+.topbar-right nav ul {display:flex; gap:15px; list-style:none;}
+.topbar-right nav ul li a {color:#eee; text-decoration:none; padding:6px 10px; border-radius:6px;}
+.topbar-right nav ul li a:hover, .topbar-right nav ul li a.active {background:#333;}
+.dark-mode-toggle {background:none; border:none; color:#6ab7ff; font-size:1.2rem; cursor:pointer;}
 
-/* Sidebar */
-.sidebar { text-align:center; padding:20px; margin-top:60px; }
-.sidebar img { width:180px; height:180px; border-radius:12px; object-fit:cover; }
-.sidebar h1 { margin:12px 0 6px; font-size:1.8rem; }
-.sidebar p { opacity:0.8; }
+/* Main Content */
+.main-content {padding:20px 30px;}
 
-/* Main content */
-main { width:90%; max-width:950px; margin:200px auto 40px auto; }
-.card { background:rgba(255,255,255,0.05); padding:22px; margin-bottom:20px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.2); opacity:0; transform:translateY(20px); transition:0.5s; }
-.card h2 { font-size:1.3rem; margin-bottom:12px; display:flex; align-items:center; gap:8px; }
-.card ul li { margin-bottom:8px; }
-.contact-links li a, .certificates-list a { display:inline-block; padding:6px 10px; border-radius:6px; background:rgba(255,255,255,0.1); color:#fff; margin:4px 2px; }
-.contact-links li a:hover, .certificates-list a:hover { background:rgba(255,255,255,0.25); }
+/* Banner */
+.banner {display:flex; justify-content:space-between; align-items:center; background:#0a2540; padding:30px 20px; border-radius:12px; margin-bottom:30px; color:#fff;}
+.banner-icon i {color:#6ab7ff;}
 
-/* Dark/Light Mode */
-body.light-mode { background:#f5f7fb; color:#111; }
-body.light-mode .topbar { background:#0a2540; }
-body.light-mode .card { background:#fff; color:#111; box-shadow:0 6px 20px rgba(0,0,0,0.08); }
-body.light-mode .contact-links li a, body.light-mode .certificates-list a { background:rgba(0,0,0,0.05); color:#0a2540; }
-body.light-mode .contact-links li a:hover, body.light-mode .certificates-list a:hover { background:rgba(10,37,64,0.2); }
+/* Cards */
+.card {background:rgba(30,30,30,0.95); padding:25px; margin-bottom:25px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.5); position:relative; overflow:hidden; opacity:0; transform:translateY(40px); animation:fadeInUp 0.8s forwards;}
+.card h2 {margin-bottom:15px; color:#6ab7ff;}
+.card p, .card ul li {margin-bottom:8px;}
+.card a {color:#6ab7ff; text-decoration:none;}
+.card a:hover {text-decoration:underline;}
+.card:hover {box-shadow:0 8px 25px rgba(106,183,255,0.6); transform:translateY(-4px);}
+
+/* Contact Buttons */
+.contact-links {list-style:none; display:flex; flex-direction:column; gap:10px;}
+.contact-links li a {display:flex; align-items:center; gap:10px; padding:10px 12px; background:rgba(255,255,255,0.05); border-radius:8px; color:#eee; text-decoration:none; transition:0.3s;}
+.contact-links li a:hover {background:rgba(106,183,255,0.3); transform:translateY(-2px);}
+
+/* Certificates */
+.certificates-list a {display:flex; align-items:center; gap:8px; padding:6px 10px; margin-bottom:8px; border-radius:6px; background:rgba(255,255,255,0.05); color:#eee; transition:0.3s;}
+.certificates-list a:hover {background:rgba(255,255,255,0.15);}
+.cert-link {margin-left:auto; font-style:italic; font-size:0.9rem; color:#6ab7ff;}
 
 /* Footer */
-.footer { text-align:center; padding:18px; background:#123d6d; margin-top:20px; }
+.footer {text-align:center; padding:20px; background:#1a1a1a; color:#eee; margin-top:20px; border-radius:8px;}
 
-/* Animate */
-.card.animate { opacity:0; transform:translateY(20px); }
-.card.animate.show { opacity:1; transform:translateY(0); }
+/* Animations */
+@keyframes fadeInUp {0%{opacity:0;transform:translateY(40px);} 100%{opacity:1;transform:translateY(0);}}
 
-/* Icons size */
-.certificates-list i { margin-right:6px; }
-
-/* Responsive */
-@media(max-width:768px){
-  main { margin-top:220px; }
-  .sidebar img { width:140px; height:140px; }
-  .topbar-links { flex-wrap:wrap; justify-content:center; }
-}
+/* Light Mode */
+body.light-mode {background:#f5f7fb; color:#111;}
+body.light-mode .topbar {background:#fff;}
+body.light-mode .topbar-left h2, body.light-mode .topbar-right nav ul li a, body.light-mode .dark-mode-toggle {color:#0a2540;}
+body.light-mode .topbar-right nav ul li a:hover, body.light-mode .topbar-right nav ul li a.active {background:#ddd;}
+body.light-mode .card {background:#fff; color:#111; box-shadow:0 6px 20px rgba(0,0,0,0.08);}
+body.light-mode .card h2 {color:#0a2540;}
+body.light-mode .contact-links li a {background:rgba(0,0,0,0.05); color:#0a2540;}
+body.light-mode .contact-links li a:hover {background:rgba(10,37,64,0.2);}
+body.light-mode .certificates-list a {background:rgba(0,0,0,0.05); color:#0a2540;}
+body.light-mode .certificates-list a:hover {background:rgba(10,37,64,0.2);}
