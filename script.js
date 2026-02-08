@@ -4,14 +4,14 @@ toggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('light-mode');
 });
 
-// Sidebar Active Link Highlight
+// Topbar Active Link Highlight
 const sections = document.querySelectorAll('section');
-const links = document.querySelectorAll('.sidebar-links li a');
+const links = document.querySelectorAll('.topbar-links li a');
 
 window.addEventListener('scroll', () => {
   let current = '';
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
+    const sectionTop = section.offsetTop - 120;
     if(pageYOffset >= sectionTop) current = section.getAttribute('id');
   });
 
