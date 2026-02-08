@@ -3,35 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohamed Ragab EL-Nemr | CV</title>
+  <title>Mohamed Ragab EL-Nemr | Interactive CV</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <!-- Profile Image -->
-      <img src="pic.png" alt="Mohamed Ragab EL-Nemr" class="profile-pic">
-
-      <h1 class="name">Mohamed Ragab EL-Nemr</h1>
-      <p class="title">IT Lab Engineer – Egypt-Japan University of Science and Technology (E-JUST)</p>
-
-      <div class="links">
-        <a href="mailto:m.elnemr2222@icloud.com"><i class="fas fa-envelope"></i> iCloud Email</a>
-        <a href="mailto:m.elnemr2222@gmail.com"><i class="fas fa-envelope"></i> Gmail</a>
-        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://linkedin.com/in/mohamed-elnemr-4a574b298" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://wa.me/201067890168" class="whatsapp"><i class="fab fa-whatsapp"></i> +201067890168</a>
-      </div>
+  <!-- Sidebar Menu -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="pic.png" alt="Mohamed Ragab EL-Nemr" class="sidebar-pic">
+      <h2>Mohamed Ragab EL-Nemr</h2>
+      <button class="dark-mode-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
     </div>
-  </header>
+    <ul class="sidebar-links">
+      <li><a href="#personal-info"><i class="fas fa-user"></i> Personal Info</a></li>
+      <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+      <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+      <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+      <li><a href="#certificates"><i class="fas fa-certificate"></i> Certificates</a></li>
+      <li><a href="#additional-info"><i class="fas fa-info-circle"></i> Additional Info</a></li>
+    </ul>
+  </aside>
 
-  <main class="container">
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Banner -->
+    <header class="banner">
+      <div class="banner-text">
+        <h1>Mohamed Ragab EL-Nemr</h1>
+        <p>IT Lab Engineer – Egypt-Japan University of Science and Technology (E-JUST)</p>
+      </div>
+      <div class="banner-icon">
+        <i class="fas fa-laptop-code fa-4x"></i>
+      </div>
+    </header>
 
     <!-- Personal Info -->
-    <section class="card personal-info">
+    <section class="card animate" id="personal-info">
       <h2><i class="fas fa-user"></i> Personal Information</h2>
       <p><i class="fas fa-map-marker-alt"></i> Miami, Alexandria, Egypt (OR) Cairo, Egypt</p>
       <p><i class="fas fa-phone"></i> 01067890168 | 01287707770 | 035547307 | +201067890168 (WhatsApp)</p>
@@ -39,21 +49,8 @@
       <p><i class="fas fa-briefcase"></i> Helpdesk, System administration, configure Windows servers, Windows (7,10,11), configure policies, join domain, create user accounts, technical support.</p>
     </section>
 
-    <!-- Professional Summary -->
-    <section class="card">
-      <h2><i class="fas fa-file-alt"></i> Professional Summary</h2>
-      <p>
-        Dedicated and detail-oriented Computer Science and Artificial Intelligence graduate with hands-on experience in
-        technical support, internet services, and system administration. Skilled in diagnosing and resolving software,
-        hardware, and network issues, managing user accounts, operating systems, and application deployments, and ensuring
-        smooth technical operations. Proficient in programming frameworks and tools for developing and maintaining efficient
-        software systems. Strong background in network troubleshooting, and performance optimization, with a focus on reliability,
-        security, and continuous improvement.
-      </p>
-    </section>
-
-    <!-- Core Technical Skills -->
-    <section class="card skills">
+    <!-- Skills -->
+    <section class="card animate" id="skills">
       <h2><i class="fas fa-cogs"></i> Core Technical Skills</h2>
       <ul>
         <li>Flutter & Dart</li>
@@ -72,7 +69,7 @@
     </section>
 
     <!-- Experience -->
-    <section class="card experience">
+    <section class="card animate" id="experience">
       <h2><i class="fas fa-briefcase"></i> Experience & Activities</h2>
       <ul>
         <li><strong>IT Lab Engineer</strong> – E-JUST | Feb 2025 – Present
@@ -110,7 +107,7 @@
     </section>
 
     <!-- Education -->
-    <section class="card education">
+    <section class="card animate" id="education">
       <h2><i class="fas fa-graduation-cap"></i> Education</h2>
       <ul>
         <li>Bachelor of Computer Science and Artificial Intelligence – Helwan University, Cairo, Egypt | Sep 2019 – Jul 2023
@@ -122,24 +119,68 @@
     </section>
 
     <!-- Certificates -->
-    <section class="card certificates">
+    <section class="card animate" id="certificates">
       <h2><i class="fas fa-certificate"></i> Certificates</h2>
-      <ul>
-        <li>Human Resource (MSP) – <a href="#" target="_blank">Certificate Link</a></li>
-        <li>Network Security (Cisco, Coursera) – <a href="https://www.coursera.org/account/accomplishments/verify/PZAQRHAFM8AJ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank">Certificate Link</a></li>
-        <li>Introduction to Computers, OS & Security (Microsoft, Coursera) – <a href="https://www.coursera.org/account/accomplishments/verify/UQG2F4HV6HU3?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank">Certificate Link</a></li>
-        <li>Introduction to Cyber Attacks (NYU, Coursera) – <a href="https://www.coursera.org/account/accomplishments/verify/HMUJG7P8CMZN?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank">Certificate Link</a></li>
-        <li>Foundations of Cyber Security (Google, Coursera) – <a href="https://www.coursera.org/account/accomplishments/verify/WKSNZ53WF67E?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank">Certificate Link</a></li>
-        <li>IT Help Desk for Beginners – <a href="https://www.linkedin.com/learning/certificates/ab45659b5b57c085e82b5763144709f06e962261b953ba1d1828fafdd18ecc39" target="_blank">Certificate Link</a></li>
-        <li>PowerShell Automation and Scripting – <a href="https://www.linkedin.com/learning/certificates/de860eba7661b7bf907e6bc4da6b7b462b8d2673f090f4d76991a852d41385b6?trk=share_certificate" target="_blank">Certificate Link</a></li>
-        <li>Computer Network Fundamentals – <a href="https://drive.google.com/file/d/1OaICBAtOWMVGjorw7fGV61j3MPypl-3v/view" target="_blank">Certificate Link</a></li>
-        <li>Implementation of Computer Network Fundamentals – <a href="https://drive.google.com/file/d/1s9xNcilmkPePQVQH0H13zYpOkRRMRCrp/view" target="_blank">Certificate Link</a></li>
-        <li>Introduction to Network Security – <a href="https://drive.google.com/file/d/1fIGqqXs5xv0seiTCxRFvWoL31ozacwIR/view" target="_blank">Certificate Link</a></li>
+      <ul class="certificates-list">
+        <li>
+          <a href="https://www.coursera.org/account/accomplishments/verify/PZAQRHAFM8AJ" target="_blank">
+            <i class="fab fa-coursera"></i> Network Security (Cisco, Coursera)
+            <span class="cert-link">Certificate Link</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.coursera.org/account/accomplishments/verify/UQG2F4HV6HU3" target="_blank">
+            <i class="fab fa-coursera"></i> Introduction to Computers, OS & Security (Microsoft, Coursera)
+            <span class="cert-link">Certificate Link</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.coursera.org/account/accomplishments/verify/HMUJG7P8CMZN" target="_blank">
+            <i class="fab fa-coursera"></i> Introduction to Cyber Attacks (NYU, Coursera)
+            <span class="cert-link">Certificate Link</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.coursera.org/account/accomplishments/verify/WKSNZ53WF67E" target="_blank">
+            <i class="fab fa-coursera"></i> Foundations of Cyber Security (Google, Coursera)
+            <span class="cert-link">Certificate Link</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/learning/certificates/ab45659b5b57c085e82b5763144709f06e962261b953ba1d1828fafdd18ecc39" target="_blank">
+            <i class="fab fa-linkedin"></i> IT Help Desk for Beginners
+            <span class="cert-link">Certificate Link</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/learning/certificates/de860eba7661b7bf907e6bc4da6b7b462b8d2673f090f4d76991a852d41385b6?trk=share_certificate" target="_blank">
+            <i class="fab fa-linkedin"></i> PowerShell Automation and Scripting
+            <span class="cert-link">Certificate Link</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1OaICBAtOWMVGjorw7fGV61j3MPypl-3v/view" target="_blank">
+            <i class="fas fa-file-alt"></i> Computer Network Fundamentals
+            <span class="cert-link">Certificate Link</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1s9xNcilmkPePQVQH0H13zYpOkRRMRCrp/view" target="_blank">
+            <i class="fas fa-file-alt"></i> Implementation of Computer Network Fundamentals
+            <span class="cert-link">Certificate Link</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1fIGqqXs5xv0seiTCxRFvWoL31ozacwIR/view" target="_blank">
+            <i class="fas fa-file-alt"></i> Introduction to Network Security
+            <span class="cert-link">Certificate Link</span>
+          </a>
+        </li>
       </ul>
     </section>
 
     <!-- Additional Info -->
-    <section class="card additional-info">
+    <section class="card animate" id="additional-info">
       <h2><i class="fas fa-info-circle"></i> Additional Information</h2>
       <ul>
         <li>Interested in Software Development, Cybersecurity, and Web Technologies.</li>
@@ -150,11 +191,58 @@
       </ul>
     </section>
 
+    <footer class="footer">
+      <p>© 2026 Mohamed Ragab EL-Nemr</p>
+    </footer>
+
   </main>
 
-  <footer class="footer">
-    <p>© 2026 Mohamed Ragab EL-Nemr</p>
-  </footer>
+  <!-- Scripts -->
+  <script>
+    // Smooth scroll
+    const links = document.querySelectorAll('.sidebar-links a');
+    const sections = document.querySelectorAll('main section');
+
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior:'smooth' });
+      });
+    });
+
+    // Highlight active sidebar link
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 80;
+        if(pageYOffset >= top) current = sec.getAttribute('id');
+      });
+      links.forEach(a => a.classList.remove('active'));
+      const activeLink = document.querySelector(`.sidebar-links a[href="#${current}"]`);
+      if(activeLink) activeLink.classList.add('active');
+    });
+
+    // Animate sections on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold:0.2 });
+
+    sections.forEach(section => observer.observe(section));
+
+    // Dark mode toggle
+    const darkModeBtn = document.querySelector('.dark-mode-toggle');
+    const body = document.body;
+
+    // Load saved mode
+    if(localStorage.getItem('darkMode') === 'true') body.classList.add('dark-mode');
+
+    darkModeBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+    });
+  </script>
 
 </body>
 </html>
