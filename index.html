@@ -3,31 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohamed Ragab EL-Nemr | Interactive CV</title>
+  <title>Mohamed Ragab EL-Nemr | CV</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<!-- Sidebar Menu -->
-<aside class="sidebar">
-  <div class="sidebar-header">
-    <img src="pic.png" alt="Mohamed Ragab EL-Nemr" class="sidebar-pic">
+<!-- Top Navbar -->
+<header class="topbar">
+  <div class="topbar-left">
+    <img src="pic.png" alt="Mohamed Ragab EL-Nemr" class="topbar-pic">
     <h2>Mohamed Ragab EL-Nemr</h2>
-    <button class="dark-mode-toggle" title="Toggle Dark Mode"><i class="fas fa-sun"></i></button>
   </div>
-  <ul class="sidebar-links">
-    <li><a href="#contact"><i class="fas fa-address-card"></i> Contact</a></li>
-    <li><a href="#personal-info"><i class="fas fa-user"></i> Personal Info</a></li>
-    <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
-    <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-    <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-    <li><a href="#certificates"><i class="fas fa-certificate"></i> Certificates</a></li>
-    <li><a href="#additional-info"><i class="fas fa-info-circle"></i> Additional Info</a></li>
-  </ul>
-</aside>
+  <div class="topbar-right">
+    <button class="dark-mode-toggle" title="Toggle Dark Mode"><i class="fas fa-sun"></i></button>
+    <nav>
+      <ul class="topbar-links">
+        <li><a href="#contact" class="active"><i class="fas fa-address-card"></i> Contact</a></li>
+        <li><a href="#personal-info"><i class="fas fa-user"></i> Personal Info</a></li>
+        <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+        <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+        <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+        <li><a href="#certificates"><i class="fas fa-certificate"></i> Certificates</a></li>
+        <li><a href="#additional-info"><i class="fas fa-info-circle"></i> Additional Info</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-<!-- Main Content -->
 <main class="main-content">
 
   <!-- Banner -->
@@ -41,23 +44,25 @@
     </div>
   </header>
 
-  <!-- Contact Section -->
+  <!-- Contact Section (Buttons Only) -->
   <section class="card animate" id="contact">
     <h2><i class="fas fa-address-card"></i> Contact</h2>
-    <ul>
-      <li><i class="fas fa-envelope"></i> m.elnemr2222@gmail.com</li>
-      <li><i class="fas fa-envelope"></i> m.elnemr2222@icloud.com</li>
-      <li><i class="fas fa-phone"></i> 01067890168</li>
-      <li><i class="fab fa-whatsapp"></i> +201067890168 (WhatsApp)</li>
-      <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/mohamed-elnemr-4a574b298" target="_blank">LinkedIn Profile</a></li>
+    <ul class="contact-links">
+      <li><a href="mailto:m.elnemr2222@gmail.com"><i class="fas fa-envelope"></i> Gmail</a></li>
+      <li><a href="mailto:m.elnemr2222@icloud.com"><i class="fas fa-envelope"></i> iCloud</a></li>
+      <li><a href="https://linkedin.com/in/mohamed-elnemr-4a574b298" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+      <li><a href="https://wa.me/201067890168" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+      <li><a href="tel:+201067890168"><i class="fas fa-phone"></i> Call</a></li>
     </ul>
   </section>
 
-  <!-- Personal Info -->
+  <!-- Personal Info Section -->
   <section class="card animate" id="personal-info">
     <h2><i class="fas fa-user"></i> Personal Information</h2>
-    <p>Helpdesk, System administration, configure Windows servers, Windows (7,10,11), configure policies, join domain, create user accounts, technical support.</p>
-    <p><i class="fas fa-map-marker-alt"></i> Miami, Alexandria, Egypt (OR) Cairo, Egypt</p>
+    <p><strong>Location:</strong> Miami, Alexandria, Egypt (OR) Cairo, Egypt</p>
+    <p><strong>Phone:</strong> 01067890168 | 01287707770 | 035547307 | +201067890168 (WhatsApp)</p>
+    <p><strong>Email:</strong> m.elnemr2222@icloud.com / m.elnemr2222@gmail.com</p>
+    <p><strong>Roles & Skills:</strong> Helpdesk, System administration, configure Windows servers, Windows (7,10,11), configure policies, join domain, create user accounts, technical support.</p>
   </section>
 
   <!-- Skills -->
@@ -162,6 +167,5 @@
 </main>
 
 <script src="script.js"></script>
-
 </body>
 </html>
