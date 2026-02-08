@@ -1,0 +1,145 @@
+/* ========== Reset & Base ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  color: #111;
+  line-height: 1.7;
+}
+
+.container {
+  width: 90%;
+  max-width: 950px;
+  margin: auto;
+}
+
+/* ========== Header ========== */
+.header {
+  background: linear-gradient(135deg, #0a2540, #123d6d);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+}
+
+.header .name {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.header .title {
+  font-size: 1.2rem;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.header .links a {
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: 0.3s;
+}
+
+.header .links a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ========== Cards / Sections ========== */
+.card {
+  background: white;
+  padding: 25px;
+  margin: 25px 0;
+  border-radius: 15px;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #0a2540;
+  display: flex;
+  align-items: center;
+}
+
+.card h2 i {
+  margin-right: 10px;
+  color: #0a66c2;
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+}
+
+.card a {
+  color: #0a66c2;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Personal Info ========== */
+.personal-info p {
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.personal-info i {
+  color: #0a66c2;
+  margin-right: 8px;
+}
+
+/* ========== Footer ========== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #0a2540;
+  color: white;
+  border-radius: 20px 20px 0 0;
+  margin-top: 30px;
+}
+
+/* ========== Print Styles ========== */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  .header, .footer {
+    background: none;
+    color: black;
+    border-radius: 0;
+  }
+  .card {
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 600px) {
+  .header .name {
+    font-size: 2rem;
+  }
+  .header .title {
+    font-size: 1rem;
+  }
+  .card h2 {
+    font-size: 1.3rem;
+  }
+}
