@@ -92,3 +92,18 @@ main {
   background: #0a2540;
   color: white;
 }
+
+.personal-info p {
+  margin-bottom: 5px;
+}
+
+.skills ul, .experience ul, .education ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
