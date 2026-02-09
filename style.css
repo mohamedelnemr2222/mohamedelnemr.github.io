@@ -402,3 +402,54 @@ body.light-mode .certificates-list a:hover {
 body.light-mode .cert-indicators span {
   background: rgba(0, 0, 0, 0.2);
 }
+
+/* ================================
+   Smooth Scroll + Scrollbar Design
+================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(106, 183, 255, 0.4);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(106, 183, 255, 0.7);
+}
+
+/* ================================
+   Smooth Fade Section Animation
+================================ */
+.card {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth hover animation on cards */
+.card:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+
+/* Active menu highlight glow */
+.topbar-right nav ul li a.active {
+  background: rgba(106, 183, 255, 0.25);
+  border: 1px solid rgba(106, 183, 255, 0.4);
+  box-shadow: 0 0 12px rgba(106, 183, 255, 0.4);
+}
+
