@@ -37,8 +37,8 @@ body {
 }
 
 .topbar-pic {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
   border-radius: 12px;
   border: 2px solid #6ab7ff;
