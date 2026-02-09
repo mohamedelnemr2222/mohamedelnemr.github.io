@@ -1,194 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohamed Ragab EL-Nemr | CV</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed EL-Nemr | CV</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<!-- Top Navbar -->
-<header class="topbar">
-  <div class="topbar-left">
-    <img src="pic.png" alt="Mohamed Ragab EL-Nemr" class="topbar-pic">
-    <h2>Mohamed Ragab EL-Nemr</h2>
-  </div>
-  <div class="topbar-right">
-    <button class="dark-mode-toggle" title="Toggle Dark Mode"><i class="fas fa-sun"></i></button>
-    <nav>
-      <ul class="topbar-links">
-        <li><a href="#contact" class="active"><i class="fas fa-address-card"></i> Contact</a></li>
-        <li><a href="#personal-info"><i class="fas fa-user"></i> Personal Info</a></li>
-        <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
-        <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-        <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-        <li><a href="#certificates"><i class="fas fa-certificate"></i> Certificates</a></li>
-        <li><a href="#additional-info"><i class="fas fa-info-circle"></i> Additional Info</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main class="main-content">
-
-  <!-- Banner -->
-  <header class="banner">
-    <div class="banner-text">
-      <h1>Mohamed Ragab EL-Nemr</h1>
-      <p>IT Lab Engineer – Egypt-Japan University of Science and Technology (E-JUST)</p>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <img src="pic.png" class="topbar-pic" alt="Profile Picture">
+      <div>
+        <h2>Mohamed EL-Nemr</h2>
+        <p>IT Lab Engineer | Helpdesk | System Administration</p>
+      </div>
     </div>
-    <div class="banner-icon">
-      <i class="fas fa-laptop-code fa-4x"></i>
-    </div>
-  </header>
 
- <!-- CONTACT INFO -->
-    <section class="card animate" id="contact">
-      <h2><i class="fas fa-address-card"></i> Contact</h2>
-      <ul class="contact-links">
-        <li><a href="mailto:m.elnemr2222@gmail.com"><i class="fas fa-envelope"></i> Gmail</a></li>
-        <li><a href="mailto:m.elnemr2222@icloud.com"><i class="fas fa-envelope"></i> iCloud</a></li>
-        <li><a href="https://www.linkedin.com/in/mohamed-ragab-el-nemr-4a574b298" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-        <li><a href="https://wa.me/201067890168" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-        <li><a href="tel:+201067890168"><i class="fas fa-phone"></i> Call</a></li>
+    <div class="topbar-right">
+      <nav>
+        <ul class="topbar-links">
+          <li><a href="#personal">Personal Info</a></li>
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#cert-gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="dark-mode-toggle" title="Toggle Dark/Light Mode">
+        <i class="fas fa-sun"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="main-content">
+
+    <!-- Banner -->
+    <div class="banner">
+      <div>
+        <h1>Mohamed EL-Nemr</h1>
+        <p>Professional CV Website</p>
+
+        <!-- Download CV -->
+        <a href="Mohamed EL-Nemr(CV).pdf" download class="download-btn">
+          <i class="fas fa-download"></i> Download CV (PDF)
+        </a>
+      </div>
+
+      <div class="banner-icon">
+        <i class="fas fa-user-shield fa-4x"></i>
+      </div>
+    </div>
+
+    <!-- Personal Info -->
+    <section class="card" id="personal">
+      <h2><i class="fas fa-id-card"></i> Personal Information</h2>
+      <p><strong>Miami, Alexandria, Egypt (OR) Cairo, Egypt</strong></p>
+      <p><strong>01067890168 | 01287707770 | 035547307 | +201067890168 (WhatsApp)</strong></p>
+      <p><strong>m.elnemr2222@icloud.com / m.elnemr2222@gmail.com</strong></p>
+      <p><strong>Helpdesk, System administration, configure Windows servers, Windows (7,10,11), configure policies, join domain, create user accounts, technical support.</strong></p>
+    </section>
+
+    <!-- Summary -->
+    <section class="card" id="summary">
+      <h2><i class="fas fa-user"></i> Professional Summary</h2>
+      <p>
+        Dedicated and detail-oriented Computer Science and Artificial Intelligence graduate with hands-on experience in
+        technical support, internet services, and system administration. Skilled in diagnosing and resolving software,
+        hardware, and network issues, managing user accounts, operating systems, and application deployments, and ensuring
+        smooth technical operations. Strong background in network troubleshooting and performance optimization, with a focus
+        on reliability, security, and continuous improvement.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="card" id="skills">
+      <h2><i class="fas fa-laptop-code"></i> Core Technical Skills</h2>
+      <ul>
+        <li>Flutter & Dart</li>
+        <li>Operating Systems: Windows (7,10,11) Installation & Maintenance</li>
+        <li>System Administration: Windows Server, Domain, Policies, Users</li>
+        <li>Hardware Support: Printers, scanners, peripheral devices</li>
+        <li>Server Administration: Managing and maintaining server environments</li>
+        <li>Technical Troubleshooting: Diagnostics, optimization, upgrades</li>
+        <li>Network Support: LAN/WAN, TCP/IP, CCTV troubleshooting</li>
+        <li>Languages: Arabic (Native), English (Fluent)</li>
       </ul>
     </section>
 
-  <!-- Personal Info -->
-  <section class="card animate" id="personal-info">
-    <h2><i class="fas fa-user"></i> Personal Information</h2>
-    <p><strong>Location:</strong> Miami, Alexandria, Egypt (OR) Cairo, Egypt</p>
-    <p><strong>Phone:</strong> 01067890168 | 01287707770 | 035547307 | +201067890168 (WhatsApp)</p>
-    <p><strong>Email:</strong> m.elnemr2222@icloud.com / m.elnemr2222@gmail.com</p>
-    <p><strong>Roles & Skills:</strong> System administration, configure & manage Windows servers, Windows (7,10,11), configure policies, join domain, create user accounts, technical support.</p>
-  </section>
+    <!-- Experience -->
+    <section class="card" id="experience">
+      <h2><i class="fas fa-briefcase"></i> Experience</h2>
 
-  <!-- Skills -->
-  <section class="card animate" id="skills">
-    <h2><i class="fas fa-cogs"></i> Core Technical Skills</h2>
-    <ul>
-      <li><i class="fas fa-check-circle"></i> Flutter & Dart</li>
-      <li><i class="fas fa-check-circle"></i> Operating Systems: Microsoft Windows (installation, configuration, maintenance)</li>
-      <li><i class="fas fa-check-circle"></i> System Administration: Install/configure Windows servers, manage domains, create user accounts</li>
-      <li><i class="fas fa-check-circle"></i> Hardware Support: Printers, scanners, and peripheral devices troubleshooting</li>
-      <li><i class="fas fa-check-circle"></i> Server Administration: Manage and maintain server environments</li>
-      <li><i class="fas fa-check-circle"></i> Technical Troubleshooting: PC hardware/software diagnostics, performance optimization, system upgrades</li>
-      <li><i class="fas fa-check-circle"></i> Network Support: LAN/WAN, TCP/IP protocols, CCTV system troubleshooting</li>
-      <li><i class="fas fa-check-circle"></i> Software & Hardware Management: Support for end users’ software and hardware systems</li>
-      <li><i class="fas fa-check-circle"></i> Project Support: Managed workstation users and system configurations for graduation projects</li>
-      <li><i class="fas fa-check-circle"></i> Teamwork & Individual Work: Multi-tasking efficiently under pressure</li>
-      <li><i class="fas fa-check-circle"></i> Communication: Strong interpersonal skills to assist/train users</li>
-      <li><i class="fas fa-check-circle"></i> Languages: Arabic (Native), English (Fluent)</li>
-    </ul>
-  </section>
+      <p><strong>IT Lab Engineer – Egypt-Japan University of Science and Technology (E-JUST)</strong></p>
+      <p>February 2025 – Present</p>
+      <ul>
+        <li>Manage and maintain PCs and workstations across multiple university labs.</li>
+        <li>Install, configure, and update software and hardware used in teaching and research.</li>
+        <li>Troubleshoot technical issues for students, teaching assistants, and faculty members.</li>
+        <li>Administer user accounts and applications used in graduation projects.</li>
+        <li>Manage and secure the Cybersecurity Lab servers, switches, and client PCs.</li>
+      </ul>
 
-  <!-- Experience -->
-  <section class="card animate" id="experience">
-    <h2><i class="fas fa-briefcase"></i> Experience & Activities</h2>
-    <ul>
-      <li><strong>IT Lab Engineer</strong> – E-JUST | Feb 2025 – Present
-        <ul>
-          <li>Manage and maintain PCs and workstations across multiple labs.</li>
-          <li>Install, configure, update software and hardware for teaching and research.</li>
-          <li>Troubleshoot technical issues for students, staff, and faculty.</li>
-          <li>Administer user accounts and applications for graduation projects.</li>
-          <li>Oversee small-scale networks including switches and servers.</li>
-          <li>Manage Cybersecurity Lab, including servers, switches, client PCs for simulations.</li>
-        </ul>
-      </li>
-      <li><strong>Retail Sales</strong> – Orange Company | Aug 2024 – Feb 2025
-        <ul>
-          <li>Promoted and sold Orange products and services.</li>
-          <li>Guided customers in selecting plans and resolving billing/product issues.</li>
-          <li>Achieved monthly sales targets through communication and technical knowledge.</li>
-        </ul>
-      </li>
-      <li><strong>Technical Support</strong> – Xceed Company (WE Account) | Sep 2023 – Feb 2024
-        <ul>
-          <li>Provided technical support for ADSL and landline users.</li>
-          <li>Diagnosed and corrected routing and technical errors during live calls.</li>
-          <li>Assisted users with modem/router troubleshooting.</li>
-          <li>Maintained accurate call logs and contributed to high customer satisfaction scores.</li>
-        </ul>
-      </li>
-      <li><strong>Human Resources Member</strong> – MSP Helwan University | 2019 – 2020
-        <ul>
-          <li>Organized technical and soft-skill sessions for students.</li>
-          <li>Supported team management and recruitment for campus programs.</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
+      <br>
 
-  <!-- Education -->
-  <section class="card animate" id="education">
-    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-    <ul>
-      <li>Bachelor of Computer Science and Artificial Intelligence – Helwan University, Cairo, Egypt | Sep 2019 – Jul 2023
-        <ul>
-          <li>Graduation Project: Mobile & Web Application for Attendance via QR Code Technology – Grade A+ (94–100%)</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
+      <p><strong>Retail Sales – Orange Company</strong></p>
+      <p>August 2024 – February 2025</p>
+      <ul>
+        <li>Promoted and sold Orange products and services.</li>
+        <li>Guided customers in selecting suitable plans and resolving billing issues.</li>
+        <li>Achieved monthly sales targets through communication and technical product knowledge.</li>
+      </ul>
 
-  <!-- Certificates -->
-  <section class="card animate" id="certificates">
-    <h2><i class="fas fa-certificate"></i> Certificates</h2>
-    <ul class="certificates-list">
-      <li>
-        <a href="https://www.google.com" target="_blank"><i class="fab fa-google"></i> Human Resource (MSP) <span class="cert-link">Certificate Link</span></a>
-      </li>
-      <li>
-        <a href="https://www.coursera.org/account/accomplishments/verify/PZAQRHAFM8AJ" target="_blank"><i class="fab fa-coursera"></i> Network Security (Cisco, Coursera) <span class="cert-link">Certificate Link</span></a>
-      </li>
-      <li>
-        <a href="https://www.coursera.org/account/accomplishments/verify/UQG2F4HV6HU3" target="_blank"><i class="fab fa-coursera"></i> Introduction to Computers, OS & Security (Microsoft, Coursera) <span class="cert-link">Certificate Link</span></a>
-      </li>
-      <li>
-        <a href="https://www.coursera.org/account/accomplishments/verify/HMUJG7P8CMZN" target="_blank"><i class="fab fa-coursera"></i> Introduction to Cyber Attacks (NYU, Coursera) <span class="cert-link">Certificate Link</span></a>
-      </li>
-      <li>
-        <a href="https://www.coursera.org/account/accomplishments/verify/WKSNZ53WF67E" target="_blank"><i class="fab fa-coursera"></i> Foundations of Cyber Security (Google, Coursera) <span class="cert-link">Certificate Link</span></a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/learning/certificates/ab45659b5b57c085e82b5763144709f06e962261b953ba1d1828fafdd18ecc39" target="_blank"><i class="fab fa-linkedin"></i> IT Help Desk for Beginners <span class="cert-link">Certificate Link</span></a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/learning/certificates/de860eba7661b7bf907e6bc4da6b7b462b8d2673f090f4d76991a852d41385b6?trk=share_certificate" target="_blank"><i class="fab fa-linkedin"></i> PowerShell Automation and Scripting <span class="cert-link">Certificate Link</span></a>
-      </li>
-      <li>
-        <a href="https://drive.google.com/file/d/1OaICBAtOWMVGjorw7fGV61j3MPypl-3v/view" target="_blank"><i class="fas fa-file-alt"></i> Computer Network Fundamentals <span class="cert-link">Certificate Link</span></a>
-      </li>
-      <li>
-        <a href="https://drive.google.com/file/d/1s9xNcilmkPePQVQH0H13zYpOkRRMRCrp/view" target="_blank"><i class="fas fa-file-alt"></i> Implementation of Computer Network Fundamentals <span class="cert-link">Certificate Link</span></a>
-      </li>
-      <li>
-        <a href="https://drive.google.com/file/d/1fIGqqXs5xv0seiTCxRFvWoL31ozacwIR/view" target="_blank"><i class="fas fa-file-alt"></i> Introduction to Network Security <span class="cert-link">Certificate Link</span></a>
-      </li>
-    </ul>
-  </section>
+      <br>
 
-  <!-- Additional Info -->
-  <section class="card animate" id="additional-info">
-    <h2><i class="fas fa-info-circle"></i> Additional Information</h2>
-    <ul>
-      <li>Interested in Software Development, Cybersecurity, and Web Technologies.</li>
-      <li>Highly motivated to learn new tools, frameworks, and technologies to adapt quickly and deliver quality results.</li>
-      <li>Committed to continuous self-improvement and contributing effectively to organizational growth and success.</li>
-      <li>Seeking a professional environment that promotes innovation, collaboration, and skill development.</li>
-      <li>Available to join after the required notice period.</li>
-    </ul>
-  </section>
+      <p><strong>Technical Support – Xceed Company (WE Account)</strong></p>
+      <p>September 2023 – February 2024</p>
+      <ul>
+        <li>Provided technical support to ADSL and landline users.</li>
+        <li>Diagnosed routing errors and configuration problems.</li>
+        <li>Assisted users with modem/router troubleshooting.</li>
+      </ul>
+    </section>
 
-  <footer class="footer">
-    <p>© 2026 Mohamed Ragab EL-Nemr</p>
-  </footer>
+    <!-- Education -->
+    <section class="card" id="education">
+      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+      <p><strong>Bachelor of Computer Science and Artificial Intelligence</strong></p>
+      <p>Helwan University, Cairo, Egypt</p>
+      <p>Sep 2019 – Jul 2023 | GPA: 2.78 / 4.00</p>
+      <p><strong>Graduation Project:</strong> Mobile & Web Application for Attendance via QR Code Technology – Grade A+ (94–100%)</p>
+    </section>
 
-</main>
+    <!-- Certificates -->
+    <section class="card" id="certificates">
+      <h2><i class="fas fa-certificate"></i> Certificates</h2>
 
-<script src="script.js"></script>
+      <div class="certificates-list">
+
+        <a href="#" target="_blank">
+          <i class="fab fa-google-drive"></i> Human Resource (MSP)
+          <span class="cert-link">Certificate Link</span>
+        </a>
+
+        <a href="https://www.coursera.org/account/accomplishments/verify/PZAQRHAFM8AJ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank">
+          <i class="fas fa-graduation-cap"></i> Network Security (Cisco, Coursera)
+          <span class="cert-link">Certificate Link</span>
+        </a>
+
+        <a href="https://www.coursera.org/account/accomplishments/verify/UQG2F4HV6HU3?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank">
+          <i class="fas fa-graduation-cap"></i> Introduction to Computers, OS & Security (Microsoft, Coursera)
+          <span class="cert-link">Certificate Link</span>
+        </a>
+
+        <a href="https://www.coursera.org/account/accomplishments/verify/HMUJG7P8CMZN?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank">
+          <i class="fas fa-graduation-cap"></i> Introduction to Cyber Attacks (NYU, Coursera)
+          <span class="cert-link">Certificate Link</span>
+        </a>
+
+        <a href="https://www.coursera.org/account/accomplishments/verify/WKSNZ53WF67E?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank">
+          <i class="fas fa-graduation-cap"></i> Foundations of Cyber Security (Google, Coursera)
+          <span class="cert-link">Certificate Link</span>
+        </a>
+
+        <a href="https://www.linkedin.com/learning/certificates/ab45659b5b57c085e82b5763144709f06e962261b953ba1d1828fafdd18ecc39" target="_blank">
+          <i class="fab fa-linkedin"></i> IT Help Desk for Beginners (LinkedIn Learning)
+          <span class="cert-link">Certificate Link</span>
+        </a>
+
+        <a href="https://www.linkedin.com/learning/certificates/de860eba7661b7bf907e6bc4da6b7b462b8d2673f090f4d76991a852d41385b6?trk=share_certificate" target="_blank">
+          <i class="fab fa-linkedin"></i> PowerShell Automation and Scripting (LinkedIn Learning)
+          <span class="cert-link">Certificate Link</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1OaICBAtOWMVGjorw7fGV61j3MPypl-3v/view" target="_blank">
+          <i class="fas fa-network-wired"></i> Computer Network Fundamentals
+          <span class="cert-link">Certificate Link</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1s9xNcilmkPePQVQH0H13zYpOkRRMRCrp/view" target="_blank">
+          <i class="fas fa-network-wired"></i> Implementation of Computer Network Fundamentals
+          <span class="cert-link">Certificate Link</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1fIGqqXs5xv0seiTCxRFvWoL31ozacwIR/view" target="_blank">
+          <i class="fas fa-network-wired"></i> Introduction to Network Security
+          <span class="cert-link">Certificate Link</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Certificates Gallery -->
+    <section class="card" id="cert-gallery">
+      <h2><i class="fas fa-images"></i> Certificates Gallery</h2>
+
+      <div class="cert-slider">
+
+        <button class="cert-btn prev-btn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <img id="certImage" src="cert1.png" alt="Certificate">
+
+        <button class="cert-btn next-btn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+      </div>
+
+      <div class="cert-indicators" id="certIndicators"></div>
+
+      <p class="cert-caption">
+        Click on the certificate to view it in full size.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="card" id="contact">
+      <h2><i class="fas fa-address-book"></i> Contact Information</h2>
+
+      <ul class="contact-links">
+        <li>
+          <a href="mailto:m.elnemr2222@gmail.com">
+            <i class="fas fa-envelope"></i> Email (Gmail)
+          </a>
+        </li>
+
+        <li>
+          <a href="mailto:m.elnemr2222@icloud.com">
+            <i class="fas fa-envelope"></i> Email (iCloud)
+          </a>
+        </li>
+
+        <li>
+          <a href="https://wa.me/201067890168" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+        </li>
+
+        <li>
+          <a href="tel:+201067890168">
+            <i class="fas fa-phone"></i> Call Mobile
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/in/mohamed-ragab-el-nemr-4a574b298" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2026 Mohamed EL-Nemr - All Rights Reserved</p>
+    </footer>
+
+  </div>
+
+  <!-- Lightbox Popup -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-lightbox" id="closeLightbox">&times;</span>
+    <img id="lightboxImage" src="" alt="Certificate Full View">
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
