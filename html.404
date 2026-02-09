@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    .notfound-container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .notfound-box {
+      max-width: 650px;
+      background: rgba(30, 30, 30, 0.95);
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+      border: 1px solid rgba(106,183,255,0.3);
+      animation: fadeInUp 0.9s forwards;
+    }
+
+    body.light-mode .notfound-box {
+      background: white;
+      color: black;
+    }
+
+    .notfound-box h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+      color: #6ab7ff;
+    }
+
+    .notfound-box p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      background: rgba(106,183,255,0.2);
+      border: 1px solid rgba(106,183,255,0.4);
+      color: white;
+      transition: 0.3s;
+    }
+
+    .back-home:hover {
+      background: rgba(106,183,255,0.4);
+      transform: translateY(-3px);
+    }
+
+    body.light-mode .back-home {
+      color: #0a2540;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="notfound-container">
+    <div class="notfound-box">
+      <h1>404</h1>
+      <p><i class="fas fa-triangle-exclamation"></i> Oops! The page you are looking for does not exist.</p>
+
+      <a href="index.html" class="back-home">
+        <i class="fas fa-house"></i> Back to Home
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Default Dark Mode like main website
+    document.body.classList.remove("light-mode");
+  </script>
+
+</body>
+</html>
