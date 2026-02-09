@@ -13,18 +13,19 @@ toggleBtn.addEventListener('click', () => {
 });
 
 
-// Scroll animation for cards
-const cards = document.querySelectorAll('.card');
+// Scroll animation for cards (Smooth)
+const cards = document.querySelectorAll(".card");
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = 1;
+      entry.target.classList.add("show");
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.15 });
 
 cards.forEach(card => observer.observe(card));
+
 
 
 // Active link highlighting
