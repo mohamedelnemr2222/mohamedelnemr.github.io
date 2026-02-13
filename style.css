@@ -453,3 +453,345 @@ html {
   box-shadow: 0 0 12px rgba(106, 183, 255, 0.4);
 }
 
+
+/* ================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ================================ */
+
+/* أساسيات للموبايل */
+@media screen and (max-width: 768px) {
+  
+  /* الهيكل العام */
+  .main-content {
+    padding: 10px;
+  }
+
+  /* ===== TOPBAR ===== */
+  .topbar {
+    flex-direction: column;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+  }
+
+  .topbar-left {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .topbar-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .topbar-pic {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+  }
+
+  .topbar-right {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  /* الروابط - تحويلها لأيقونات في الموبايل */
+  .topbar-right nav {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .topbar-right nav ul {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 5px;
+    gap: 8px;
+  }
+
+  .topbar-right nav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.7rem;
+    padding: 8px 10px;
+    white-space: nowrap;
+    background: rgba(106, 183, 255, 0.1);
+    border-radius: 20px;
+  }
+
+  .topbar-right nav ul li a i {
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+  }
+
+  .topbar-right nav ul li a span {
+    display: none; /* إخفاء النص في الموبايل */
+  }
+
+  /* ظهور النص عند الضغط المطول (اختياري) */
+  .topbar-right nav ul li a:active span {
+    display: inline;
+    position: absolute;
+    bottom: -20px;
+    background: #333;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+  }
+
+  /* ===== BANNER ===== */
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 15px;
+    margin-bottom: 20px;
+  }
+
+  .banner h1 {
+    font-size: 1.3rem;
+  }
+
+  .banner p {
+    font-size: 0.9rem;
+  }
+
+  .banner-icon {
+    display: none; /* إخفاء الأيقونة في الموبايل */
+  }
+
+  /* زر التحميل */
+  .download-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  /* ===== CARDS ===== */
+  .card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .card h2 i {
+    font-size: 1.1rem;
+  }
+
+  .card p, .card li {
+    font-size: 0.9rem;
+  }
+
+  /* ===== CONTACT SECTION ===== */
+  .contact-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .contact-links li {
+    width: 100%;
+  }
+
+  .contact-links li a {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px 5px;
+    font-size: 0.8rem;
+  }
+
+  .contact-links li a i {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+
+  /* ===== CERTIFICATES LIST ===== */
+  .certificates-list {
+    display: grid;
+    gap: 8px;
+  }
+
+  .certificates-list a {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+    position: relative;
+  }
+
+  .certificates-list a i {
+    margin-bottom: 5px;
+  }
+
+  .cert-link {
+    margin-left: 0;
+    font-size: 0.8rem;
+    background: rgba(106, 183, 255, 0.2);
+    padding: 4px 8px;
+    border-radius: 15px;
+    align-self: flex-start;
+  }
+
+  /* ===== SLIDER ===== */
+  .cert-slider {
+    max-width: 100%;
+    margin: 10px auto;
+  }
+
+  .cert-btn {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .cert-indicators span {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* ===== LIGHTBOX ===== */
+  .close-lightbox {
+    top: 15px;
+    right: 15px;
+    font-size: 2rem;
+  }
+
+  .lightbox img {
+    max-width: 95%;
+    max-height: 80%;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+}
+
+/* للشاشات الصغيرة جداً (أقل من 400px) */
+@media screen and (max-width: 400px) {
+  
+  .topbar-left h2 {
+    font-size: 1.2rem;
+  }
+
+  .topbar-pic {
+    width: 60px;
+    height: 60px;
+  }
+
+  .topbar-right nav ul li a {
+    padding: 6px 8px;
+    font-size: 0.65rem;
+  }
+
+  .contact-links {
+    grid-template-columns: 1fr; /* عمود واحد */
+  }
+
+  .banner h1 {
+    font-size: 1.1rem;
+  }
+
+  .card h2 {
+    font-size: 1.1rem;
+  }
+}
+
+/* للتابلت (بين 768px و 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  
+  .main-content {
+    padding: 15px 20px;
+  }
+
+  .topbar-left h2 {
+    font-size: 1.8rem;
+  }
+
+  .topbar-right nav ul {
+    gap: 10px;
+  }
+
+  .topbar-right nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  .contact-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .certificates-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .banner h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* تحسينات للشاشات الكبيرة */
+@media screen and (min-width: 1025px) {
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .contact-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .certificates-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+/* ================================
+   TOUCH OPTIMIZATIONS
+   ================================ */
+
+/* زيادة حجم منطقة اللمس للأزرار */
+button, 
+a,
+.cert-indicators span {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* منع التحديد العشوائي */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* تحسين التمرير */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* إخفاء شريط التمرير في الموبايل مع الاحتفاظ بالوظيفة */
+@media screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+}
