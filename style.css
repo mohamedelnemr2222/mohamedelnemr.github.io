@@ -795,3 +795,35 @@ a,
     height: 3px;
   }
 }
+
+/* ================================
+   Personal Info Icons Styling
+   ================================ */
+
+#personal p {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+#personal p i {
+  color: #6ab7ff;
+  font-size: 1.2rem;
+  min-width: 25px;
+  text-align: center;
+  margin-top: 3px;
+}
+
+/* للشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+  #personal p {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  
+  #personal p i {
+    font-size: 1.1rem;
+    min-width: 22px;
+  }
+}
