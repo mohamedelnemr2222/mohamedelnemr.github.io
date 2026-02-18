@@ -272,8 +272,8 @@ body {
 }
 
 .cert-indicators span {
-  width: 5px;
-  height: 5px;
+  width: 2.3px;
+  height:2.3px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.3);
   cursor: pointer;
