@@ -1,171 +1,214 @@
 /* ============================================================
-   تصميم Full Width احترافي مع الحفاظ على اللمسات الجمالية
+   التصميم المطور: استغلال المساحة الكاملة مع الحفاظ على الجماليات
    ============================================================ */
 
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Arial', sans-serif;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
-  background: #0f0f0f; /* لون أغمق قليلاً للفخامة */
-  color: #e0e0e0;
-  line-height: 1.6;
+  background: #121212;
+  color: #eee;
+  line-height: 1.7;
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-/* الحاوية الرئيسية */
+/* --- الحاوية الرئيسية (Full Width) --- */
 .main-content {
-  padding: 20px 3%; /* هوامش جانبية متوازنة */
+  padding: 20px 2%; /* هوامش بسيطة جداً للجوانب */
   width: 100%;
-  max-width: 100%;
+  max-width: 100%; /* استغلال كامل الشاشة */
+  margin: 0;
 }
 
-/* التوب بار - تصميم انسيابي */
+/* --- Topbar - التصميم العريض --- */
 .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background: rgba(26, 26, 26, 0.8);
-  backdrop-filter: blur(10px); /* تأثير الزجاج الضبابي */
-  border-bottom: 1px solid rgba(106, 183, 255, 0.2);
+  padding: 15px 3%;
+  background: #1a1a1a;
+  flex-wrap: wrap;
+  border-radius: 0 0 15px 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
   position: sticky;
   top: 0;
   z-index: 1000;
-  margin-bottom: 30px;
 }
 
 .topbar-left {
   display: flex;
   align-items: center;
-  gap: 25px;
-}
-
-.topbar-pic {
-  width: 80px; /* حجم أصغر قليلاً ليكون أنيقاً في التوب بار المستطيل */
-  height: 80px;
-  border-radius: 50%; /* شكل دائري يعطي لمسة عصرية */
-  border: 2px solid #6ab7ff;
-  box-shadow: 0 0 15px rgba(106, 183, 255, 0.4);
+  gap: 20px;
 }
 
 .topbar-left h2 {
-  font-size: 1.8rem;
-  letter-spacing: 1px;
-  background: linear-gradient(90deg, #fff, #6ab7ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 2.2rem;
 }
 
-/* البطاقات - تصميم Dashboard */
+.topbar-pic {
+  width: 100px; /* حجم متناسق مع العرض الجديد */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #6ab7ff;
+}
+
+.topbar-right nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.topbar-right nav ul li a {
+  color: #eee;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar-right nav ul li a:hover,
+.topbar-right nav ul li a.active {
+  background: rgba(106, 183, 255, 0.2);
+  box-shadow: 0 0 10px rgba(106, 183, 255, 0.2);
+}
+
+/* --- Banner --- */
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #0a2540 0%, #05192d 100%);
+  padding: 40px 3%;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  color: #fff;
+  width: 100%;
+}
+
+.banner h1 { font-size: 2.5rem; }
+
+/* --- Cards (استغلال المساحة بداخل البطاقة) --- */
 .card {
-  background: #1a1a1a;
+  background: rgba(30, 30, 30, 0.95);
   padding: 35px;
   margin-bottom: 25px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  position: relative;
-  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  border: 1px solid rgba(255,255,255,0.05);
+  opacity: 0; /* للأنيميشن */
 }
 
-/* اللمسة الجمالية: خط جانبي ملون لكل بطاقة */
-.card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 4px;
-  background: #6ab7ff;
+/* الأنيميشن الخاص بك */
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card h2 {
+  margin-bottom: 20px;
   color: #6ab7ff;
-  font-size: 1.5rem;
-  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(106,183,255,0.2);
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- تحويل القوائم إلى شبكة (Grid) لاستغلال العرض --- */
+.card ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* يضع العناصر بجانب بعضها لو المساحة تسمح */
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  background: rgba(255,255,255,0.03);
+  padding: 12px 15px;
+  border-radius: 8px;
+  border-left: 3px solid #6ab7ff;
+}
+
+/* --- شبكة الروابط والشهادات --- */
+.contact-links, .certificates-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+}
+
+.contact-links li a, .certificates-list a {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #eee;
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-/* --- توزيع المحتوى بداخل البطاقات لاستغلال العرض --- */
-/* جعل قسم المهارات والخبرات يظهر في أعمدة */
-.card ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* تقسيم تلقائي بناءً على العرض */
-  gap: 15px;
-  list-style: none;
+.contact-links li a:hover, .certificates-list a:hover {
+  background: rgba(106, 183, 255, 0.2);
+  transform: translateY(-3px);
 }
 
-.card ul li {
-  background: rgba(255, 255, 255, 0.03);
-  padding: 12px 20px;
-  border-radius: 10px;
-  border-left: 2px solid rgba(106, 183, 255, 0.3);
-}
-
-/* شبكة الروابط والشهادات */
-.contact-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.contact-item {
-  background: #222;
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-  text-decoration: none;
-  color: #eee;
-  border: 1px solid transparent;
-}
-
-.contact-item:hover {
-  border-color: #6ab7ff;
-  background: rgba(106, 183, 255, 0.05);
-  transform: translateY(-5px);
-}
-
-/* تعديل السلايدر ليكون عريضاً ومتناسقاً */
+/* --- Slider (جعله أكبر قليلاً) --- */
 .cert-slider {
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: 20px auto;
   border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+/* ================================
+   تنسيق الأجهزة (Responsive)
+   ================================ */
+
+/* الموبايل */
+@media screen and (max-width: 768px) {
+  .topbar { padding: 15px; }
+  .topbar-left h2 { font-size: 1.5rem; }
+  .topbar-pic { width: 70px; height: 70px; }
+  
+  .card ul {
+    grid-template-columns: 1fr; /* عمود واحد في الموبايل */
+  }
+  
+  .banner h1 { font-size: 1.5rem; }
+  .topbar-right nav ul li a span { display: none; } /* أيقونات فقط لتوفير مساحة */
+}
+
+/* التابلت والشاشات المتوسطة */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .card ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* الشاشات الكبيرة جداً (استغلال فائق) */
+@media screen and (min-width: 1600px) {
+  .card ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .main-content {
+    padding: 20px 5%;
+  }
 }
 
 /* Light Mode */
-body.light-mode {
-  background: #f4f7fa;
-  color: #333;
-}
-body.light-mode .card, body.light-mode .topbar {
-  background: #fff;
-  border-color: rgba(0,0,0,0.05);
-}
-body.light-mode .card ul li {
-  background: #f9f9f9;
-  color: #555;
-}
-
-/* Animation */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.card { animation: fadeInUp 0.6s ease-out; }
-
-/* للموبايل */
-@media (max-width: 768px) {
-  .topbar { padding: 15px; flex-direction: column; gap: 15px; }
-  .card { padding: 20px; }
-  .card ul { grid-template-columns: 1fr; }
-}
+body.light-mode { background: #f0f2f5; color: #111; }
+body.light-mode .card, body.light-mode .topbar { background: #fff; }
+body.light-mode .card ul li { background: #f9f9f9; color: #333; }
