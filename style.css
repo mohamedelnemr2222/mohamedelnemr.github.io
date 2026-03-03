@@ -1,178 +1,171 @@
-/* ================================
-   General Styles & Full Width Fix
-   ================================ */
+/* ============================================================
+   تصميم Full Width احترافي مع الحفاظ على اللمسات الجمالية
+   ============================================================ */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-  transition: all 0.3s ease; [cite: 46]
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
-  background: #121212;
-  color: #eee;
-  line-height: 1.7;
-  scroll-behavior: smooth; [cite: 47]
+  background: #0f0f0f; /* لون أغمق قليلاً للفخامة */
+  color: #e0e0e0;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* تعديل المحتوى الرئيسي لاستغلال كامل عرض الشاشة */
+/* الحاوية الرئيسية */
 .main-content {
-  padding: 20px 40px; 
+  padding: 20px 3%; /* هوامش جانبية متوازنة */
   width: 100%;
-  max-width: 100%; /* تم إلغاء الحد الأقصى 1200px لاستغلال كامل الشاشة  */
-  margin: 0;
+  max-width: 100%;
 }
 
-/* ================================
-   Topbar - Full Width
-   ================================ */
+/* التوب بار - تصميم انسيابي */
 .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background: #1a1a1a;
-  flex-wrap: wrap;
-  border-radius: 0 0 12px 12px; /* جعل الزوايا حادة من الأعلى لتلتصق بالسقف */
+  padding: 20px 40px;
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(10px); /* تأثير الزجاج الضبابي */
+  border-bottom: 1px solid rgba(106, 183, 255, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   margin-bottom: 30px;
-  width: 100%; 
 }
 
 .topbar-left {
   display: flex;
   align-items: center;
-  gap: 15px; [cite: 49]
-}
-
-.topbar-left h2 {
-  font-size: 2rem;
+  gap: 25px;
 }
 
 .topbar-pic {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 2px solid #6ab7ff; [cite: 50]
+  width: 80px; /* حجم أصغر قليلاً ليكون أنيقاً في التوب بار المستطيل */
+  height: 80px;
+  border-radius: 50%; /* شكل دائري يعطي لمسة عصرية */
+  border: 2px solid #6ab7ff;
+  box-shadow: 0 0 15px rgba(106, 183, 255, 0.4);
 }
 
-.topbar-right nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none; [cite: 51, 52]
+.topbar-left h2 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #fff, #6ab7ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* ================================
-   Banner - Expanded
-   ================================ */
-.banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #0a2540;
-  padding: 40px;
-  border-radius: 15px;
-  margin-bottom: 30px;
-  color: #fff;
-  width: 100%; [cite: 55, 56]
-}
-
-.banner h1 {
-  font-size: 2.5rem;
-}
-
-/* ================================
-   Cards Layout
-   ================================ */
+/* البطاقات - تصميم Dashboard */
 .card {
-  background: rgba(30, 30, 30, 0.95);
-  padding: 30px;
+  background: #1a1a1a;
+  padding: 35px;
   margin-bottom: 25px;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-  width: 100%; /* تمدد البطاقة بعرض الصفحة [cite: 60] */
-  animation: fadeInUp 0.8s forwards;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+/* اللمسة الجمالية: خط جانبي ملون لكل بطاقة */
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: #6ab7ff;
 }
 
 .card h2 {
   color: #6ab7ff;
-  margin-bottom: 20px; [cite: 62]
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-/* ================================
-   Grid Layout for Content (للشاشات الكبيرة)
-   ================================ */
-@media screen and (min-width: 1025px) {
-  
-  /* استغلال العرض بزيادة عدد الأعمدة */
-  .contact-links {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 أعمدة بدلاً من 3 [cite: 149] */
-    gap: 15px;
-  }
-
-  .certificates-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة بدلاً من 2 [cite: 150] */
-    gap: 20px;
-  }
-
-  /* جعل الأقسام الصغيرة تظهر بجانب بعضها (اختياري) */
-  /* إذا أردت جعل Personal Info و Contact بجانب بعضهما، فك التشفير عن الكود التالي: */
-  /*
-  #personal, #contact {
-    display: inline-block;
-    vertical-align: top;
-    width: 49%;
-  }
-  */
+/* --- توزيع المحتوى بداخل البطاقات لاستغلال العرض --- */
+/* جعل قسم المهارات والخبرات يظهر في أعمدة */
+.card ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* تقسيم تلقائي بناءً على العرض */
+  gap: 15px;
+  list-style: none;
 }
 
-/* ================================
-   Slider & Images - Responsive Full View
-   ================================ */
+.card ul li {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px 20px;
+  border-radius: 10px;
+  border-left: 2px solid rgba(106, 183, 255, 0.3);
+}
+
+/* شبكة الروابط والشهادات */
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.contact-item {
+  background: #222;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #eee;
+  border: 1px solid transparent;
+}
+
+.contact-item:hover {
+  border-color: #6ab7ff;
+  background: rgba(106, 183, 255, 0.05);
+  transform: translateY(-5px);
+}
+
+/* تعديل السلايدر ليكون عريضاً ومتناسقاً */
 .cert-slider {
-  max-width: 900px; /* تكبير عرض عرض الشهادات قليلاً [cite: 70] */
-  margin: 20px auto;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
 }
 
-.cert-slider img {
-  width: 100%;
-  cursor: pointer; [cite: 72]
-}
-
-/* ================================
-   Dark/Light Mode Support
-   ================================ */
+/* Light Mode */
 body.light-mode {
-  background: #f5f7fb;
-  color: #111; [cite: 84]
+  background: #f4f7fa;
+  color: #333;
 }
-
-body.light-mode .topbar, 
-body.light-mode .card {
+body.light-mode .card, body.light-mode .topbar {
   background: #fff;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05); [cite: 85, 88]
+  border-color: rgba(0,0,0,0.05);
+}
+body.light-mode .card ul li {
+  background: #f9f9f9;
+  color: #555;
 }
 
-/* Animations */
+/* Animation */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ================================
-   Mobile Fixes
-   ================================ */
-@media screen and (max-width: 768px) {
-  .main-content {
-    padding: 10px; [cite: 100]
-  }
-  .topbar {
-    padding: 15px; [cite: 101]
-  }
-  .contact-links {
-    grid-template-columns: repeat(2, 1fr); [cite: 122]
-  }
+.card { animation: fadeInUp 0.6s ease-out; }
+
+/* للموبايل */
+@media (max-width: 768px) {
+  .topbar { padding: 15px; flex-direction: column; gap: 15px; }
+  .card { padding: 20px; }
+  .card ul { grid-template-columns: 1fr; }
 }
