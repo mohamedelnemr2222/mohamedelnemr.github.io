@@ -1,829 +1,178 @@
-/* Reset */
+/* ================================
+   General Styles & Full Width Fix
+   ================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; [cite: 46]
 }
 
 body {
   background: #121212;
   color: #eee;
   line-height: 1.7;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; [cite: 47]
 }
 
-/* Topbar */
+/* تعديل المحتوى الرئيسي لاستغلال كامل عرض الشاشة */
+.main-content {
+  padding: 20px 40px; 
+  width: 100%;
+  max-width: 100%; /* تم إلغاء الحد الأقصى 1200px لاستغلال كامل الشاشة  */
+  margin: 0;
+}
+
+/* ================================
+   Topbar - Full Width
+   ================================ */
 .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 15px 40px;
   background: #1a1a1a;
   flex-wrap: wrap;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  border-radius: 0 0 12px 12px; /* جعل الزوايا حادة من الأعلى لتلتصق بالسقف */
+  margin-bottom: 30px;
+  width: 100%; 
 }
 
 .topbar-left {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 15px; [cite: 49]
 }
 
 .topbar-left h2 {
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 .topbar-pic {
-  width: 140px;
-  height: 140px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 12px;
-  border: 2px solid #6ab7ff;
-}
-
-.topbar-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  border: 2px solid #6ab7ff; [cite: 50]
 }
 
 .topbar-right nav ul {
   display: flex;
-  gap: 15px;
-  list-style: none;
-  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none; [cite: 51, 52]
 }
 
-.topbar-right nav ul li a {
-  color: #eee;
-  text-decoration: none;
-  padding: 6px 10px;
-  border-radius: 6px;
-}
-
-.topbar-right nav ul li a:hover,
-.topbar-right nav ul li a.active {
-  background: #333;
-}
-
-.dark-mode-toggle {
-  background: none;
-  border: none;
-  color: #6ab7ff;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-/* Main Content */
-.main-content {
-  padding: 20px 30px;
-}
-
-/* Banner */
+/* ================================
+   Banner - Expanded
+   ================================ */
 .banner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #0a2540;
-  padding: 30px 20px;
-  border-radius: 12px;
+  padding: 40px;
+  border-radius: 15px;
   margin-bottom: 30px;
   color: #fff;
+  width: 100%; [cite: 55, 56]
 }
 
 .banner h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
 }
 
-.banner p {
-  opacity: 0.9;
-}
-
-.banner-icon i {
-  color: #6ab7ff;
-}
-
-/* Download Button */
-.download-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 14px;
-  background: rgba(106, 183, 255, 0.2);
-  border: 1px solid rgba(106, 183, 255, 0.4);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-}
-
-.download-btn:hover {
-  background: rgba(106, 183, 255, 0.4);
-  transform: translateY(-2px);
-}
-
-/* Cards */
+/* ================================
+   Cards Layout
+   ================================ */
 .card {
   background: rgba(30, 30, 30, 0.95);
-  padding: 25px;
+  padding: 30px;
   margin-bottom: 25px;
-  border-radius: 12px;
+  border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-  position: relative;
-  overflow: hidden;
-  opacity: 0;
-  transform: translateY(40px);
+  width: 100%; /* تمدد البطاقة بعرض الصفحة [cite: 60] */
   animation: fadeInUp 0.8s forwards;
 }
 
 .card h2 {
-  margin-bottom: 15px;
   color: #6ab7ff;
+  margin-bottom: 20px; [cite: 62]
 }
 
-.card p,
-.card ul li {
-  margin-bottom: 8px;
+/* ================================
+   Grid Layout for Content (للشاشات الكبيرة)
+   ================================ */
+@media screen and (min-width: 1025px) {
+  
+  /* استغلال العرض بزيادة عدد الأعمدة */
+  .contact-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 أعمدة بدلاً من 3 [cite: 149] */
+    gap: 15px;
+  }
+
+  .certificates-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة بدلاً من 2 [cite: 150] */
+    gap: 20px;
+  }
+
+  /* جعل الأقسام الصغيرة تظهر بجانب بعضها (اختياري) */
+  /* إذا أردت جعل Personal Info و Contact بجانب بعضهما، فك التشفير عن الكود التالي: */
+  /*
+  #personal, #contact {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+  }
+  */
 }
 
-.card ul {
-  padding-left: 20px;
-}
-
-.card a {
-  color: #6ab7ff;
-  text-decoration: none;
-}
-
-.card a:hover {
-  text-decoration: underline;
-}
-
-.card:hover {
-  box-shadow: 0 8px 25px rgba(106, 183, 255, 0.6);
-  transform: translateY(-4px);
-}
-
-/* Contact Buttons */
-.contact-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.contact-links li a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  color: #eee;
-  text-decoration: none;
-}
-
-.contact-links li a:hover {
-  background: rgba(106, 183, 255, 0.3);
-  transform: translateY(-2px);
-}
-
-/* Certificates */
-.certificates-list a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  color: #eee;
-}
-
-.certificates-list a:hover {
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateY(-2px);
-}
-
-.cert-link {
-  margin-left: auto;
-  font-style: italic;
-  font-size: 0.9rem;
-  color: #6ab7ff;
-}
-
-/* Certificates Slider */
+/* ================================
+   Slider & Images - Responsive Full View
+   ================================ */
 .cert-slider {
-  position: relative;
-  width: 100%;
-  max-width: 750px;
-  margin: 15px auto;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 2px solid rgba(106, 183, 255, 0.4);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  max-width: 900px; /* تكبير عرض عرض الشهادات قليلاً [cite: 70] */
+  margin: 20px auto;
 }
 
 .cert-slider img {
   width: 100%;
-  height: auto;
-  display: block;
-  cursor: pointer;
-  transition: opacity 0.7s ease;
+  cursor: pointer; [cite: 72]
 }
 
-/* Next / Prev Buttons */
-.cert-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  padding: 12px 14px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1.2rem;
-  z-index: 10;
+/* ================================
+   Dark/Light Mode Support
+   ================================ */
+body.light-mode {
+  background: #f5f7fb;
+  color: #111; [cite: 84]
 }
 
-.cert-btn:hover {
-  background: rgba(106, 183, 255, 0.6);
-}
-
-.prev-btn {
-  left: 12px;
-}
-
-.next-btn {
-  right: 12px;
-}
-
-/* Indicators */
-.cert-indicators {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 12px;
-}
-
-.cert-indicators span {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.cert-indicators span.active {
-  background: #6ab7ff;
-  transform: scale(1.3);
-}
-
-/* Caption */
-.cert-caption {
-  text-align: center;
-  margin-top: 12px;
-  opacity: 0.8;
-}
-
-/* Lightbox */
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 85%;
-  border-radius: 12px;
-  border: 2px solid rgba(106, 183, 255, 0.6);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-}
-
-.close-lightbox {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  font-size: 2.5rem;
-  color: white;
-  cursor: pointer;
-}
-
-.close-lightbox:hover {
-  color: #6ab7ff;
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 20px;
-  background: #1a1a1a;
-  color: #eee;
-  margin-top: 20px;
-  border-radius: 8px;
+body.light-mode .topbar, 
+body.light-mode .card {
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05); [cite: 85, 88]
 }
 
 /* Animations */
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Light Mode */
-body.light-mode {
-  background: #f5f7fb;
-  color: #111;
-}
-
-body.light-mode .topbar {
-  background: #fff;
-}
-
-body.light-mode .topbar-left h2,
-body.light-mode .topbar-right nav ul li a,
-body.light-mode .dark-mode-toggle {
-  color: #0a2540;
-}
-
-body.light-mode .topbar-right nav ul li a:hover,
-body.light-mode .topbar-right nav ul li a.active {
-  background: #ddd;
-}
-
-body.light-mode .card {
-  background: #fff;
-  color: #111;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-}
-
-body.light-mode .card h2 {
-  color: #0a2540;
-}
-
-body.light-mode .contact-links li a {
-  background: rgba(0, 0, 0, 0.05);
-  color: #0a2540;
-}
-
-body.light-mode .contact-links li a:hover {
-  background: rgba(10, 37, 64, 0.2);
-}
-
-body.light-mode .certificates-list a {
-  background: rgba(0, 0, 0, 0.05);
-  color: #0a2540;
-}
-
-body.light-mode .certificates-list a:hover {
-  background: rgba(10, 37, 64, 0.2);
-}
-
-body.light-mode .cert-indicators span {
-  background: rgba(0, 0, 0, 0.2);
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ================================
-   Smooth Scroll + Scrollbar Design
-================================ */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(106, 183, 255, 0.4);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(106, 183, 255, 0.7);
-}
-
-/* ================================
-   Smooth Fade Section Animation
-================================ */
-.card {
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-.card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Smooth hover animation on cards */
-.card:hover {
-  transform: translateY(-6px) scale(1.01);
-}
-
-/* Active menu highlight glow */
-.topbar-right nav ul li a.active {
-  background: rgba(106, 183, 255, 0.25);
-  border: 1px solid rgba(106, 183, 255, 0.4);
-  box-shadow: 0 0 12px rgba(106, 183, 255, 0.4);
-}
-
-
-/* ================================
-   RESPONSIVE DESIGN - MOBILE FIRST
+   Mobile Fixes
    ================================ */
-
-/* أساسيات للموبايل */
 @media screen and (max-width: 768px) {
-  
-  /* الهيكل العام */
   .main-content {
-    padding: 10px;
+    padding: 10px; [cite: 100]
   }
-
-  /* ===== TOPBAR ===== */
   .topbar {
-    flex-direction: column;
-    padding: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
+    padding: 15px; [cite: 101]
   }
-
-  .topbar-left {
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .topbar-left h2 {
-    font-size: 1.5rem;
-  }
-
-  .topbar-pic {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto;
-  }
-
-  .topbar-right {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-  }
-
-  /* الروابط - تحويلها لأيقونات في الموبايل */
-  .topbar-right nav {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .topbar-right nav ul {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    padding-bottom: 5px;
-    gap: 8px;
-  }
-
-  .topbar-right nav ul li a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 0.7rem;
-    padding: 8px 10px;
-    white-space: nowrap;
-    background: rgba(106, 183, 255, 0.1);
-    border-radius: 20px;
-  }
-
-  .topbar-right nav ul li a i {
-    font-size: 1.1rem;
-    margin-bottom: 3px;
-  }
-
-  .topbar-right nav ul li a span {
-    display: none; /* إخفاء النص في الموبايل */
-  }
-
-  /* ظهور النص عند الضغط المطول (اختياري) */
-  .topbar-right nav ul li a:active span {
-    display: inline;
-    position: absolute;
-    bottom: -20px;
-    background: #333;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.7rem;
-  }
-
-  /* ===== BANNER ===== */
-  .banner {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px 15px;
-    margin-bottom: 20px;
-  }
-
-  .banner h1 {
-    font-size: 1.3rem;
-  }
-
-  .banner p {
-    font-size: 0.9rem;
-  }
-
-  .banner-icon {
-    display: none; /* إخفاء الأيقونة في الموبايل */
-  }
-
-  /* زر التحميل */
-  .download-btn {
-    width: 100%;
-    text-align: center;
-    padding: 12px;
-    font-size: 1rem;
-  }
-
-  /* ===== CARDS ===== */
-  .card {
-    padding: 15px;
-    margin-bottom: 15px;
-  }
-
-  .card h2 {
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .card h2 i {
-    font-size: 1.1rem;
-  }
-
-  .card p, .card li {
-    font-size: 0.9rem;
-  }
-
-  /* ===== CONTACT SECTION ===== */
   .contact-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-
-  .contact-links li {
-    width: 100%;
-  }
-
-  .contact-links li a {
-    flex-direction: column;
-    text-align: center;
-    padding: 12px 5px;
-    font-size: 0.8rem;
-  }
-
-  .contact-links li a i {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-  }
-
-  /* ===== CERTIFICATES LIST ===== */
-  .certificates-list {
-    display: grid;
-    gap: 8px;
-  }
-
-  .certificates-list a {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px;
-    position: relative;
-  }
-
-  .certificates-list a i {
-    margin-bottom: 5px;
-  }
-
-  .cert-link {
-    margin-left: 0;
-    font-size: 0.8rem;
-    background: rgba(106, 183, 255, 0.2);
-    padding: 4px 8px;
-    border-radius: 15px;
-    align-self: flex-start;
-  }
-
-  /* ===== SLIDER ===== */
-  .cert-slider {
-    max-width: 100%;
-    margin: 10px auto;
-  }
-
-  .cert-btn {
-    padding: 8px 10px;
-    font-size: 0.9rem;
-    background: rgba(0, 0, 0, 0.7);
-  }
-
-  .cert-indicators span {
-    width: 8px;
-    height: 8px;
-  }
-
-  /* ===== LIGHTBOX ===== */
-  .close-lightbox {
-    top: 15px;
-    right: 15px;
-    font-size: 2rem;
-  }
-
-  .lightbox img {
-    max-width: 95%;
-    max-height: 80%;
-  }
-
-  /* ===== FOOTER ===== */
-  .footer {
-    padding: 15px;
-    font-size: 0.8rem;
-  }
-}
-
-/* للشاشات الصغيرة جداً (أقل من 400px) */
-@media screen and (max-width: 400px) {
-  
-  .topbar-left h2 {
-    font-size: 1.2rem;
-  }
-
-  .topbar-pic {
-    width: 60px;
-    height: 60px;
-  }
-
-  .topbar-right nav ul li a {
-    padding: 6px 8px;
-    font-size: 0.65rem;
-  }
-
-  .contact-links {
-    grid-template-columns: 1fr; /* عمود واحد */
-  }
-
-  .banner h1 {
-    font-size: 1.1rem;
-  }
-
-  .card h2 {
-    font-size: 1.1rem;
-  }
-}
-
-/* للتابلت (بين 768px و 1024px) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  
-  .main-content {
-    padding: 15px 20px;
-  }
-
-  .topbar-left h2 {
-    font-size: 1.8rem;
-  }
-
-  .topbar-right nav ul {
-    gap: 10px;
-  }
-
-  .topbar-right nav ul li a {
-    font-size: 0.9rem;
-  }
-
-  .contact-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .certificates-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .banner h1 {
-    font-size: 1.8rem;
-  }
-}
-
-/* تحسينات للشاشات الكبيرة */
-@media screen and (min-width: 1025px) {
-  .main-content {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .contact-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .certificates-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-}
-
-/* ================================
-   TOUCH OPTIMIZATIONS
-   ================================ */
-
-/* زيادة حجم منطقة اللمس للأزرار */
-button, 
-a,
-.cert-indicators span {
-  min-height: 44px;
-  min-width: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* منع التحديد العشوائي */
-* {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-}
-
-/* تحسين التمرير */
-* {
-  -webkit-overflow-scrolling: touch;
-}
-
-/* إخفاء شريط التمرير في الموبايل مع الاحتفاظ بالوظيفة */
-@media screen and (max-width: 768px) {
-  ::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
-  }
-}
-
-/* ================================
-   Personal Info Icons Styling
-   ================================ */
-
-#personal p {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 15px;
-}
-
-#personal p i {
-  color: #6ab7ff;
-  font-size: 1.2rem;
-  min-width: 25px;
-  text-align: center;
-  margin-top: 3px;
-}
-
-/* للشاشات الصغيرة */
-@media screen and (max-width: 768px) {
-  #personal p {
-    gap: 10px;
-    margin-bottom: 12px;
-  }
-  
-  #personal p i {
-    font-size: 1.1rem;
-    min-width: 22px;
+    grid-template-columns: repeat(2, 1fr); [cite: 122]
   }
 }
