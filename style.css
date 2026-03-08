@@ -770,7 +770,7 @@ html {
 /* زيادة حجم منطقة اللمس للأزرار */
 button, 
 a,
-.cert-indicators span {
+ {
   min-height: 44px;
   min-width: 44px;
   display: inline-flex;
