@@ -60,6 +60,7 @@ const certImages = [
   "cert7.png",
   "cert8.png",
   "cert9.png"
+  "cert10.png"
 ];
 
 let certIndex = 0;
